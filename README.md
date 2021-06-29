@@ -13,7 +13,7 @@ We provide our implementation of visualizing cell lineage, as a downstream of ou
 
 - TGMM 2.0: Cell Tracking with Gaussian Mixture Models
 
-  [TGMM 2.0](https://bitbucket.org/fernandoamat/tgmm-paper/src/master/) perform cell segmentation and tracking for mining cell lineage, which employs a machine learning approach to division detection utilizing both lineage-based and image-based features.
+  [TGMM 2.0](https://bitbucket.org/fernandoamat/tgmm-paper/src/master/) performs cell segmentation and tracking for mining cell lineage, which employs a machine learning approach to division detection utilizing both lineage-based and image-based features.
 
   An example result of the same image dataset that we reformed is in `./dataset_mat/`. Each of the columns contains the following information:
 
