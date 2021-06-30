@@ -310,6 +310,6 @@ if __name__ == '__main__':
     process.add_colorbar(colorbar_img='./colormap/insert_colorbar_white_magenta.png',
                          img_path='./output/', img_start_index=1, img_end_index=384)
 
-    # FFmpeg Makes Images Frames Into Video
+    # FFmpeg Makes Image Frames Into Video
     process.rename_for_video(img_path='./output/', img_type='tiff')
     lineage_viewer.make_video(frame_path='./output/', video_output_path='./output/', width=1034, height=938)
