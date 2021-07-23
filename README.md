@@ -42,17 +42,15 @@ cd lineage-viewer
   For pip users, please type the command `pip install -r requirements.txt`.
 
   For Conda users,  you can create a new Conda environment using `conda env create -f environment.yml`.
-
+  
+  #Update 2021.7.23:
+  
+  By itself Mayavi is not a difficult package to install, but its dependencies are unfortunately rather heavy. If `import VTK` doesn't work, try available wheels in this [website](https://www.lfd.uci.edu/~gohlke/pythonlibs/), such as `VTK-8.2.0-cp36-cp36m-win_amd64.whl` and `mayavi-4.7.1+vtk82-cp36-cp36m-win_amd64.whl`.
+  
 - Install FFmpeg multimedia framework.
 
-  Download [FFpmeg](https://ffmpeg.org/download.html) and add it to Windows path using environment variables.
+  Download [FFmpeg](https://ffmpeg.org/download.html) and add it to Windows path using environment variables.
 
-  For Linux users, open a new terminal and then run the following commands.
-```bash
-sudo apt update
-sudo apt install ffmpeg
-ffmpeg -version
-```
 - Make frames and video using lineage viewer.
 
   To use lineage viewer for visualizing cell lineage, run `python lineage_viewer.py`. The results containing image frames and video will be stored at `./output/`.
@@ -81,7 +79,7 @@ if __name__ == '__main__':
     process.add_colorbar(colorbar_img='./colormap/insert_colorbar_white_magenta.png',
                          img_path='./output/', img_start_index=1, img_end_index=384)
 
-    # FFmpeg Makes Image Frames Into Video
+    # FFmpeg Makes Images Frames Into Video
     process.rename_for_video(img_path='./output/', img_type='tiff')
     lineage_viewer.make_video(frame_path='./output/', video_output_path='./output/', width=1034, height=938)
 ```

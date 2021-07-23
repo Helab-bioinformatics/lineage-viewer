@@ -10,7 +10,6 @@ import cv2
 import numpy as np
 import scipy.io as sio
 import os
-import subprocess
 import math
 
 
@@ -161,7 +160,7 @@ class Viewer(Settings):
         ffmpeg_filename = os.path.join(frame_path, '{}%0{}d{}'.format(self.prefix, 3, self.ext))
         cmd = 'ffmpeg -f image2 -r {} -i {} -pix_fmt yuv420p -strict experimental -vf scale={}:{} -acodec aac -vcodec libx264 -y {}{}.mp4'.format(
             self.fps, ffmpeg_filename, width, height, video_output_path, 'video')
-        subprocess.check_output(['bash', '-c', cmd])
+        os.system(cmd)
 
         # Remove temp image files
         if not verbose:
